@@ -11940,6 +11940,9 @@ div#notebook {
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">temp</span><span class="o">+=</span><span class="mi">1</span>
 <span class="n">number_of_barriers_row1</span> <span class="o">=</span> <span class="n">temp</span>
+<span class="c1"># 这个表达式确实简洁很多</span>
+<span class="n">number_of_barriers_row1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">env_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="mi">2</span><span class="p">])</span>
+
 <span class="c1">#TODO 5计算模拟环境中，第三列的的障碍物个数。</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">env_data</span><span class="p">:</span>
@@ -12113,6 +12116,7 @@ OK
 <span class="sd">    act -- string, robots meant action</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1">#TODO 8</span>
+    <span class="c1">#对基础数据类型还有些不熟悉</span>
     <span class="n">flag</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">rightB</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">env_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">bottomB</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">env_data</span><span class="p">)</span>
@@ -12274,6 +12278,7 @@ OK
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong> （任务4中的env_data为全局变量，处处可访问；任务5中的env_data是局部变量，只有这个方法内可访问）</p>
+<p><strong>回答：</strong> （任务4中的env_data为全局变量，全局范围内可访问，但是修改要加 global 关键字；任务5中的env_data是局部变量，只能在声明他的函数内访问调用）</p>
 
 </div>
 </div>
